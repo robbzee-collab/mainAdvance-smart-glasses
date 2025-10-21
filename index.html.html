@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Smart Glasses</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(180deg, #0a0a0a, #000);
+        }
+        header h1 {
+            color: #00ff7f;
+            font-size: 28px;
+        }
+        header p {
+            font-size: 16px;
+            color: #aaa;
+        }
+        .price {
+            text-align: center;
+            padding: 15px;
+        }
+        .price h2 {
+            color: red;
+            margin: 0;
+        }
+        .price s {
+            color: #666;
+            font-size: 16px;
+        }
+        .price p {
+            color: #00ff7f;
+            font-weight: bold;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+        }
+        .gallery img {
+            height: 300px;
+            border-radius: 10px;
+            scroll-snap-align: center;
+        }
+        .features {
+            padding: 20px;
+            text-align: center;
+        }
+        .features h3 {
+            color: #00ff7f;
+        }
+        .order-section {
+            background-color: #111;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, select {
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        button {
+            background-color: #00ff7f;
+            color: #000;
+            font-weight: bold;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00cc66;
+        }
+        .note {
+            text-align: center;
+            color: #00ff7f;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .alert {
+            background-color: #fff176;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advance Smart Glasses</h1>
+        <p>It’s not a flex — it’s a necessity.</p>
+    </header>
+
+    <div class="price">
+        <h2>Promo Price: ₦110,000</h2>
+        <s>₦135,000</s>
+        <p>🔥 Limited-Time Offer!</p>
+    </div>
+
+    <div class="gallery">
+        <img src="IMG_9183.JPG" alt="Smart Glass 1">
+        <img src="IMG_9184.JPG" alt="Smart Glass 2">
+        <img src="a45783c9-0157-4845-9817-7359c76d41dc.png" alt="Smart Glass 3">
+    </div>
+
+    <div class="features">
+        <h3>Why You Need Advance Smart Glasses</h3>
+        <p>Record clear videos, take pictures, answer calls, listen to music, and translate 7+ languages in real time — all hands-free!</p>
+    </div>
+
+    <section class="order-section">
+        <form onsubmit="sendToWhatsApp(event)">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="address" placeholder="Home Address" required>
+            <input type="text" id="state" placeholder="Delivery State" required>
+            <select id="package" required>
+                <option value="">Select Your Package</option>
+                <option value="1 Pc - ₦110,000">1 Pc - ₦110,000</option>
+                <option value="2 Pcs - ₦210,000">2 Pcs - ₦210,000</option>
+                <option value="3 Pcs - ₦320,000">3 Pcs - ₦320,000</option>
+                <option value="5 Pcs - ₦525,000">5 Pcs - ₦525,000</option>
+                <option value="10 Pcs - ₦1,050,000">10 Pcs - ₦1,050,000</option>
+            </select>
+            <button type="submit">Order Now</button>
+        </form>
+
+        <div class="note">✅ Free Delivery Nationwide</div>
+        <div class="note">💰 Payment on Delivery Available</div>
+        <div class="alert">⚠️ Please do not order if you won’t be financially ready to receive the product.</div>
+    </section>
+
+    <footer>
+        © 2025 Advance Smart Glasses | Powered by Robbzee Gadget Hub
+    </footer>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const address = document.getElementById("address").value;
+            const state = document.getElementById("state").value;
+            const pkg = document.getElementById("package").value;
+            const message = `Hello! I’d like to order Advance Smart Glasses.%0A%0AFull Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AAddress: ${address}%0ADelivery State: ${state}%0APackage: ${pkg}`;
+            window.open(`https://wa.me/2347033835027?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>

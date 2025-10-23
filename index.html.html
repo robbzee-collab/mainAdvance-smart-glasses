@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,167 +6,174 @@
   <title>Advance Smart Glasses</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #111;
+      line-height: 1.6;
     }
     header {
-      background: url('https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/a45783c9-0157-4845-9817-7359c76d41dc.png') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      background: linear-gradient(to right, #000, #007f3f);
       color: #fff;
-      flex-direction: column;
+      text-align: center;
+      padding: 70px 20px;
+      background-image: url('https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9183.JPG');
+      background-size: cover;
+      background-position: center;
     }
     header h1 {
-      font-size: 2em;
-      background: rgba(0, 0, 0, 0.6);
+      font-size: 2.5rem;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
       padding: 10px 20px;
       border-radius: 10px;
     }
-    header p {
-      font-size: 1.2em;
-      color: #00ff80;
-      margin-top: 10px;
-    }
-    section {
-      padding: 30px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
     .price {
       text-align: center;
-      font-size: 1.3em;
+      margin: 30px 0;
     }
-    .price span {
-      color: #00ff80;
+    .price h2 {
+      color: #007f3f;
+      font-size: 2rem;
+    }
+    .promo {
+      color: red;
       font-weight: bold;
     }
-    .old-price {
-      text-decoration: line-through;
-      color: #888;
-    }
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .notice {
-      background: #111;
-      border: 2px solid #00ff80;
-      border-radius: 10px;
-      padding: 15px;
+    .section {
+      padding: 40px 20px;
       text-align: center;
-      margin: 25px 0;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: linear-gradient(135deg, #e0ffe6, #ccffcc);
+      padding: 50px 10px;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .reviews {
+      background-color: #f0f0f0;
+      padding: 40px 20px;
+    }
+    .review {
+      background: white;
+      border-radius: 10px;
+      margin: 10px auto;
+      max-width: 500px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      background: #111;
+      max-width: 500px;
+      margin: 0 auto;
       padding: 20px;
+      background: white;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    input, select {
+    input, select, button {
+      width: 100%;
       padding: 10px;
+      margin: 8px 0;
       border-radius: 5px;
-      border: none;
-      outline: none;
-      font-size: 1em;
+      border: 1px solid #ccc;
     }
     button {
-      background: #00ff80;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      padding: 12px;
+      background-color: #007f3f;
+      color: white;
+      font-size: 1.1rem;
       cursor: pointer;
-      font-size: 1.1em;
-      transition: 0.3s;
+      border: none;
     }
     button:hover {
-      background: #00cc66;
+      background-color: #005f2f;
     }
-    footer {
+    .disclaimer {
+      font-size: 0.8rem;
       text-align: center;
-      padding: 15px;
-      background: #000;
-      color: #888;
-      font-size: 0.9em;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5em;
-      }
+      color: #666;
+      margin: 30px 10px;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Advance Smart Glasses — It’s not a flex, it’s a necessity.</h1>
-    <p>Experience vision, sound, and intelligence — all in one frame.</p>
   </header>
 
-  <section>
-    <div class="price">
-      <p><span>Promo Price:</span> ₦110,000 <span class="old-price">₦135,000</span></p>
-      <p><strong style="color:#00ff80;">Free Delivery Nationwide 🚚</strong></p>
-      <p><strong>Payment on Delivery Available 💵</strong></p>
-    </div>
+  <section class="price">
+    <h2>Promo Price: ₦110,000 <span class="promo">(Normal Price ₦135,000)</span></h2>
+    <p style="color: green; font-weight: bold;">FREE Delivery + Payment on Delivery</p>
+    <p style="color: red; font-weight: bold;">⚠️ Please do not order if you won’t be financially ready to receive the product.</p>
+  </section>
 
-    <div class="gallery">
-      <img src="https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9183.JPG" alt="Smart Glasses Product View 1">
-      <img src="https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9184.JPG" alt="Smart Glasses Product View 2">
-    </div>
+  <section class="features">
+    <div class="feature">🎥 Crystal Clear Video Recording</div>
+    <div class="feature">📸 High-Quality Photo Capture</div>
+    <div class="feature">🎧 Listen To Music & Take Calls</div>
+    <div class="feature">🌍 Real-Time Translation (7+ Languages)</div>
+    <div class="feature">🧠 Smart Object Recognition</div>
+  </section>
 
-    <div class="notice">
-      <strong style="color:#ff3333;">⚠️ Please do not place an order if you’re not financially ready to receive the product.</strong>
-    </div>
+  <section class="section">
+    <img src="https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9184.JPG" alt="Smart Glasses" width="80%" style="border-radius: 15px;">
+  </section>
 
-    <form action="https://wa.me/2347033835027" method="get" target="_blank">
-      <label>Full Name</label>
-      <input type="text" name="name" placeholder="Enter your full name" required>
-
-      <label>Phone Number</label>
-      <input type="tel" name="phone" placeholder="Enter your phone number" required>
-
-      <label>Email Address</label>
-      <input type="email" name="email" placeholder="Enter your email address" required>
-
-      <label>Home Address</label>
-      <input type="text" name="address" placeholder="Enter your home address" required>
-
-      <label>Delivery State</label>
-      <input type="text" name="state" placeholder="Enter your delivery state" required>
-
-      <label>Select Your Package</label>
-      <select name="package" required>
-        <option value="">-- Select Package --</option>
-        <option>1 Pc - ₦110,000</option>
-        <option>2 Pcs - ₦210,000</option>
-        <option>3 Pcs - ₦320,000</option>
-        <option>5 Pcs - ₦525,000</option>
-        <option>10 Pcs - ₦1,050,000</option>
+  <section class="section">
+    <form id="orderForm">
+      <h2>Place Your Order</h2>
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="text" id="address" placeholder="Home Address" required>
+      <input type="text" id="state" placeholder="Delivery State" required>
+      <label for="package">Select your package *</label>
+      <select id="package">
+        <option value="1 Pc - ₦110,000">1 Pc - ₦110,000</option>
+        <option value="2 Pcs - ₦210,000">2 Pcs - ₦210,000</option>
+        <option value="3 Pcs - ₦320,000">3 Pcs - ₦320,000</option>
+        <option value="5 Pcs - ₦525,000">5 Pcs - ₦525,000</option>
+        <option value="10 Pcs - ₦1,050,000">10 Pcs - ₦1,050,000</option>
       </select>
-
       <button type="submit">Order Now</button>
     </form>
   </section>
 
-  <footer>
-    <p>© 2025 Advance Smart Glasses. All Rights Reserved.</p>
-  </footer>
+  <section class="reviews">
+    <h2>What Our Customers Are Saying</h2>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “I was shocked how clear the video quality is! Totally worth it.” – <b>Tunde A.</b></div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “The translation feature blew my mind. Must-have gadget.” – <b>Peace O.</b></div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “Free delivery + payment on delivery = perfect combo!” – <b>Samuel I.</b></div>
+  </section>
 
+  <div class="disclaimer">
+    This Site Is Not A Part Of The Facebook Website Or Facebook Inc.<br>
+    Additionally, This Site Is Not Endorsed By Facebook In Any Way.<br>
+    FACEBOOK Is A Trademark Of FACEBOOK, Inc.
+  </div>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const address = document.getElementById('address').value;
+      const state = document.getElementById('state').value;
+      const pack = document.getElementById('package').value;
+
+      const message = `NEW ORDER:%0A%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AAddress: ${address}%0AState: ${state}%0APackage: ${pack}`;
+      window.open(`https://wa.me/2347033835027?text=${message}`, '_blank');
+    });
+  </script>
 </body>
 </html>

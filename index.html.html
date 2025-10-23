@@ -1,179 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advance Smart Glasses</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f5f5f5;
-      color: #111;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #000, #007f3f);
-      color: #fff;
-      text-align: center;
-      padding: 70px 20px;
-      background-image: url('https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9183.JPG');
-      background-size: cover;
-      background-position: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      background-color: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-    .price {
-      text-align: center;
-      margin: 30px 0;
-    }
-    .price h2 {
-      color: #007f3f;
-      font-size: 2rem;
-    }
-    .promo {
-      color: red;
-      font-weight: bold;
-    }
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .features {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      background: linear-gradient(135deg, #e0ffe6, #ccffcc);
-      padding: 50px 10px;
-    }
-    .feature {
-      flex: 1 1 250px;
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .reviews {
-      background-color: #f0f0f0;
-      padding: 40px 20px;
-    }
-    .review {
-      background: white;
-      border-radius: 10px;
-      margin: 10px auto;
-      max-width: 500px;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    input, select, button {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #007f3f;
-      color: white;
-      font-size: 1.1rem;
-      cursor: pointer;
-      border: none;
-    }
-    button:hover {
-      background-color: #005f2f;
-    }
-    .disclaimer {
-      font-size: 0.8rem;
-      text-align: center;
-      color: #666;
-      margin: 30px 10px;
-      line-height: 1.4;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Advance Smart Glasses — It’s not a flex, it’s a necessity</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:#000;color:#fff;line-height:1.45}
+  .container{max-width:980px;margin:0 auto;padding:0 18px}
+  /* HERO - use couple image as background */
+  .hero{
+    min-height:72vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 18px;
+    background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/a45783c9-0157-4845-9817-7359c76d41dc.png') center/cover no-repeat;
+    animation:fadeUp .9s ease both;
+  }
+  .hero h1{font-size:1.6rem;color:#00ff80;margin-bottom:10px}
+  .hero p{color:#dfeee4;margin-bottom:14px}
+  .price-row{margin-top:12px}
+  .promo{font-weight:800;color:#00ff80}
+  .old{color:#999;text-decoration:line-through;margin-left:10px;font-weight:600}
+  .cta{margin-top:18px}
+  .btn{background:#00ff80;color:#000;padding:12px 22px;border-radius:999px;border:none;font-weight:700;cursor:pointer}
+  .btn:hover{transform:scale(1.03)}
+  /* features */
+  .features{background:linear-gradient(90deg,#062b1f,#00ff80);color:#00291a;padding:30px 18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center}
+  .feature{min-width:140px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,0.9);text-align:center;font-weight:700}
+  /* gallery */
+  .gallery{display:flex;gap:12px;flex-wrap:wrap;padding:22px 18px;justify-content:center}
+  .gallery img{width:320px;max-width:100%;border-radius:12px;display:block}
+  /* reviews */
+  .reviews{background:#f5f5f5;color:#111;padding:36px 18px;text-align:center}
+  .review-card{max-width:720px;margin:12px auto;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+  .stars{color:#00b060;font-size:1.2rem;margin-bottom:6px}
+  /* order form */
+  .order{padding:34px 18px;background:#0b0b0b}
+  form{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+  input,select{padding:12px;border-radius:8px;border:none;font-size:1rem}
+  .order-note{color:#ff4d4d;font-weight:700;margin-top:8px}
+  footer{padding:18px;text-align:center;color:#aaa;background:#050505;font-size:14px}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  @media(min-width:760px){.hero h1{font-size:2.1rem}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Advance Smart Glasses — It’s not a flex, it’s a necessity.</h1>
-  </header>
+  <main class="container">
+    <section class="hero" id="home" role="banner" aria-label="Hero">
+      <div>
+        <h1>Advance Smart Glasses — It’s not a flex, it’s a necessity.</h1>
+        <p>Experience crystal-clear recording, AI translation & hands-free convenience.</p>
+        <div class="price-row"><span class="promo">Promo Price: ₦110,000</span><span class="old">₦135,000</span></div>
+        <p style="color:#00ff80;font-weight:700;margin-top:8px">🚚 Free Delivery Nationwide • 💳 Payment on Delivery</p>
+        <div class="cta"><button class="btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Now</button></div>
+      </div>
+    </section>
 
-  <section class="price">
-    <h2>Promo Price: ₦110,000 <span class="promo">(Normal Price ₦135,000)</span></h2>
-    <p style="color: green; font-weight: bold;">FREE Delivery + Payment on Delivery</p>
-    <p style="color: red; font-weight: bold;">⚠️ Please do not order if you won’t be financially ready to receive the product.</p>
-  </section>
+    <section class="features" aria-label="Features">
+      <div class="feature">🎥 HD Video Recording</div>
+      <div class="feature">🎧 Music & Calls</div>
+      <div class="feature">🌐 Real-Time Translation</div>
+      <div class="feature">🧠 AI Object Recognition</div>
+      <div class="feature">🔋 Long Battery Life</div>
+    </section>
 
-  <section class="features">
-    <div class="feature">🎥 Crystal Clear Video Recording</div>
-    <div class="feature">📸 High-Quality Photo Capture</div>
-    <div class="feature">🎧 Listen To Music & Take Calls</div>
-    <div class="feature">🌍 Real-Time Translation (7+ Languages)</div>
-    <div class="feature">🧠 Smart Object Recognition</div>
-  </section>
+    <section class="gallery" aria-label="Gallery">
+      <img src="https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9183.JPG" alt="Smart Glasses product 1">
+      <img src="https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9184.JPG" alt="Smart Glasses product 2">
+    </section>
 
-  <section class="section">
-    <img src="https://raw.githubusercontent.com/robbzee-collab/mainAdvance-smart-glasses/main/IMG_9184.JPG" alt="Smart Glasses" width="80%" style="border-radius: 15px;">
-  </section>
+    <section class="reviews" aria-label="Customer reviews">
+      <h2>What Our Customers Say</h2>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Didn’t expect this level of clarity and comfort. I wear mine every day!” — <strong>Ugochukwu, Lagos</strong></p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>“The translation feature is crazy good. It’s like having Google Lens on your face.” — <strong>Sarah, Abuja</strong></p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Totally worth the price — I’ve ordered two more for friends.” — <strong>Tunde, PH</strong></p>
+      </div>
+    </section>
 
-  <section class="section">
-    <form id="orderForm">
-      <h2>Place Your Order</h2>
-      <input type="text" id="name" placeholder="Full Name" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-      <input type="email" id="email" placeholder="Email Address" required>
-      <input type="text" id="address" placeholder="Home Address" required>
-      <input type="text" id="state" placeholder="Delivery State" required>
-      <label for="package">Select your package *</label>
-      <select id="package">
-        <option value="1 Pc - ₦110,000">1 Pc - ₦110,000</option>
-        <option value="2 Pcs - ₦210,000">2 Pcs - ₦210,000</option>
-        <option value="3 Pcs - ₦320,000">3 Pcs - ₦320,000</option>
-        <option value="5 Pcs - ₦525,000">5 Pcs - ₦525,000</option>
-        <option value="10 Pcs - ₦1,050,000">10 Pcs - ₦1,050,000</option>
-      </select>
-      <button type="submit">Order Now</button>
-    </form>
-  </section>
+    <section class="order" id="order" aria-label="Order form">
+      <h2 style="text-align:center;margin-bottom:12px">Place Your Order</h2>
+      <form id="orderForm">
+        <input id="name" name="name" type="text" placeholder="Full Name" required>
+        <input id="phone" name="phone" type="tel" placeholder="Phone Number" required>
+        <input id="email" name="email" type="email" placeholder="Email Address" required>
+        <input id="address" name="address" type="text" placeholder="Home Address" required>
+        <input id="state" name="state" type="text" placeholder="Delivery State" required>
+        <select id="package" name="package" required>
+          <option value="">Select your package</option>
+          <option value="1 Pc - ₦110,000">Smart Glasses — 1 Pc — ₦110,000</option>
+          <option value="2 Pcs - ₦210,000">Smart Glasses — 2 Pcs — ₦210,000</option>
+          <option value="3 Pcs - ₦320,000">Smart Glasses — 3 Pcs — ₦320,000</option>
+          <option value="5 Pcs - ₦525,000">Smart Glasses — 5 Pcs — ₦525,000</option>
+          <option value="10 Pcs - ₦1,050,000">Smart Glasses — 10 Pcs — ₦1,050,000</option>
+        </select>
+        <button type="button" class="btn" onclick="sendToWhatsApp()">Order Now</button>
+      </form>
+      <div class="order-note">⚠️ Do not order if you won’t be financially ready to receive the product.</div>
+    </section>
 
-  <section class="reviews">
-    <h2>What Our Customers Are Saying</h2>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ “I was shocked how clear the video quality is! Totally worth it.” – <b>Tunde A.</b></div>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ “The translation feature blew my mind. Must-have gadget.” – <b>Peace O.</b></div>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ “Free delivery + payment on delivery = perfect combo!” – <b>Samuel I.</b></div>
-  </section>
+    <footer>
+      <p>© 2025 Advance Smart Glasses | All Rights Reserved.</p>
+      <p style="font-size:13px;color:#bbb;margin-top:8px">This Site Is Not A Part Of The Facebook Website Or Facebook Inc.<br>
+      Additionally, This Site Is Not Endorsed By Facebook In Any Way.<br>
+      FACEBOOK Is A Trademark Of FACEBOOK, Inc.</p>
+    </footer>
+  </main>
 
-  <div class="disclaimer">
-    This Site Is Not A Part Of The Facebook Website Or Facebook Inc.<br>
-    Additionally, This Site Is Not Endorsed By Facebook In Any Way.<br>
-    FACEBOOK Is A Trademark Of FACEBOOK, Inc.
-  </div>
-
-  <script>
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const email = document.getElementById('email').value;
-      const address = document.getElementById('address').value;
-      const state = document.getElementById('state').value;
-      const pack = document.getElementById('package').value;
-
-      const message = `NEW ORDER:%0A%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AAddress: ${address}%0AState: ${state}%0APackage: ${pack}`;
-      window.open(`https://wa.me/2347033835027?text=${message}`, '_blank');
-    });
-  </script>
+<script>
+function sendToWhatsApp(){
+  var name = encodeURIComponent(document.getElementById('name').value || '');
+  var phone = encodeURIComponent(document.getElementById('phone').value || '');
+  var email = encodeURIComponent(document.getElementById('email').value || '');
+  var address = encodeURIComponent(document.getElementById('address').value || '');
+  var state = encodeURIComponent(document.getElementById('state').value || '');
+  var pack = encodeURIComponent(document.getElementById('package').value || '');
+  if(!name||!phone||!email||!address||!state||!pack){
+    alert('Please fill all fields before ordering.');
+    return;
+  }
+  var msg = "Hello! I want to order Advance Smart Glasses ("+pack+")%0A%0AMy details:%0A📞 "+phone+"%0A📧 "+email+"%0A🏠 "+address+"%0A🏙️ "+state+"%0A%0AName: "+name;
+  var url = "https://wa.me/2347033835027?text="+msg;
+  window.open(url, '_blank');
+}
+</script>
 </body>
 </html>
